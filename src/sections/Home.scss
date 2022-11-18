@@ -1,0 +1,75 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 98px);
+  margin-top: 98px;
+
+  .logo-left {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 384px;
+  }
+
+  .logo-right {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 409px;
+  }
+
+  .slogan {
+    font-size: 64px;
+    line-height: 92px;
+    color: #fff;
+  }
+
+  .step-container {
+    display: inline-flex;
+    align-items: center;
+
+    .step-item {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      color: #fff;
+
+      &:before {
+        display: inline-block;
+        content: "";
+        width: 16px;
+        height: 16px;
+        margin-bottom: 16px;
+        border-radius: 50%;
+        background: #fffdfd;
+      }
+    }
+
+    hr {
+      display: inline-block;
+      width: 221px;
+      margin: 0 16px;
+    }
+  }
+
+  .ready-go {
+    .ready-text {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    button {
+      font-size: 32px;
+      color: #000;
+      padding: 19px 65px;
+      border-radius: 20px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+  }
+}
