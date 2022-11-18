@@ -1,5 +1,7 @@
 {
   "name": "2022_f2e_w2",
+  "homepage": "https://diuer.github.io/2022_f2e_w2/",
+  "repository": "https://github.com/Diuer/2022_f2e_w2.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
