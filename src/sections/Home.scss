@@ -27,32 +27,16 @@
   }
 
   .step-container {
-    display: inline-flex;
-    align-items: center;
-
     .step-item {
-      position: relative;
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 24px;
-      color: #fff;
+      color: #fffdfd;
 
       &:before {
-        display: inline-block;
-        content: "";
-        width: 16px;
-        height: 16px;
-        margin-bottom: 16px;
-        border-radius: 50%;
         background: #fffdfd;
       }
     }
 
     hr {
-      display: inline-block;
-      width: 221px;
-      margin: 0 16px;
+      border-color: #fffdfd;
     }
   }
 
