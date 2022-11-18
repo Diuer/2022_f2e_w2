@@ -1,6 +1,6 @@
 import "./App.scss";
 
-import Header from "./sections/Header";
+import Header from "./sections/header";
 import Home from "./sections/Home";
 
 function App() {
