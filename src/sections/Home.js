@@ -5,7 +5,7 @@ import Steps from "../components/Steps";
 
 import "./Home.scss";
 
-const Home = () => {
+const Home = ({ onGoSign }) => {
   return (
     <div className="home">
       <img className="logo-left" src={logoLeft} alt="logo-left" />
@@ -18,7 +18,7 @@ const Home = () => {
       <Steps />
       <div className="ready-go">
         <p className="ready-text">只需三步驟，立即簽署您的文件！</p>
-        <button>立即簽署文件</button>
+        <button onClick={onGoSign}>立即簽署文件</button>
       </div>
     </div>
   );

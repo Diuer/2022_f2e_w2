@@ -1,0 +1,66 @@
+.sign-dialog {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1080px;
+  height: 727px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: #fffdfd;
+  background-image: url(../assets/logo-light.png);
+
+  .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    position: relative;
+
+    .btn-text {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #2a2a2a;
+    }
+  }
+
+  .fake-btn {
+    position: relative;
+    display: block;
+
+    label {
+      display: inline-block;
+      padding: 19px 65px;
+      font-size: 32px;
+      color: #fffdfd;
+      border-radius: 20px;
+      background: #6c8268;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    input[type="file"] {
+      display: none;;
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.7;
+}
