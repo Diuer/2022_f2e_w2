@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState, useMemo, createRef } from "react";
 import { pdfjs } from "react-pdf/dist/esm/entry.webpack5";
 
+import dragIcon from "../assets/drag-icon.png";
+import editIcon from "../assets/edit-icon.png";
+
 import "./PdfPreview.scss";
 
 function PdfPreview({ file }) {
@@ -13,6 +16,10 @@ function PdfPreview({ file }) {
     [file.maxPage]
   );
   const [page, setPage] = useState(0);
+  const [signInfo, setSignInfo] = useState({
+    signName: localStorage.getItem("signName"),
+    signImage: localStorage.getItem("signImage"),
+  });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const renderPDF = async () => {
@@ -69,7 +76,7 @@ function PdfPreview({ file }) {
         <div className="pdf-info">
           <input
             className="pdf-info-name"
-            defaultValue={file.info.name}
+            defaultValue={file.info?.name}
             readOnly
           />
           <input
@@ -97,6 +104,20 @@ function PdfPreview({ file }) {
       </div>
       <div className="sign-container">
         <h1>簽署文件</h1>
+        <h2 className="title">您的簽名</h2>
+        <div className="content sign-content">
+          {signInfo.signName && signInfo.signImage && (
+            <>
+              <img className="drag-icon" src={dragIcon} alt="drag-icon" />
+              <img
+                className="sign-image"
+                src={signInfo.signImage}
+                alt="sign-saved"
+              />
+              <img className="edit-icon" src={editIcon} alt="edit-icon" />
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

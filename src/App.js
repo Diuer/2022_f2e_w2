@@ -9,8 +9,8 @@ import SignDialog from "./sections/SignDialog";
 import PdfPreview from "./sections/PdfPreview";
 
 function App() {
-  const [isShowDialog, setIsShowDialog] = useState(true);
-  const [pdf, setPdf] = useState();
+  const [isShowDialog, setIsShowDialog] = useState(false);
+  const [pdf, setPdf] = useState({});
 
   const openDialog = () => {
     setIsShowDialog(true);

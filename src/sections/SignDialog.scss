@@ -11,7 +11,8 @@
   transform: translate(-50%, -50%);
   border-radius: 20px;
   background-color: #fffdfd;
-  background-image: url(../assets/logo-light.png);
+  background-image: url(../assets/logo-light.png);background-repeat: no-repeat;
+  background-size: contain;
 
   .btn-close {
     position: absolute;
@@ -37,12 +38,13 @@
     position: relative;
     display: block;
 
-    label {
+    label, button {
       display: inline-block;
       padding: 19px 65px;
       font-size: 32px;
       color: #fffdfd;
       border-radius: 20px;
+      border: none;
       background: #6c8268;
       box-sizing: border-box;
       cursor: pointer;
@@ -50,6 +52,145 @@
 
     input[type="file"] {
       display: none;;
+    }
+  }
+
+  &.is-rotate-logo {
+    display: block;
+    height: 874px;
+    background-color: #e1eddf;
+    overflow: hidden;
+    background-image: url(../assets/logo-bg.png);
+
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 51px;
+      padding: 0 24px;
+      color: #2a2a2a;
+      font-size: 24px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .sign-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 61px 113px;
+
+      label {
+
+      }
+
+      input {
+        height: 40px;
+        margin: 8px 0;
+        padding: 0 16px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+
+      .fake-btn {
+        margin: 0 auto;
+        
+        label, button {
+          display: inline-block;
+          padding: 10px 16px;
+          font-size: 24px;
+          border-radius: 10px;
+
+          &.disabled {
+            background: #cfcfcf;
+            pointer-events: none;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .sign-board {
+        width: 100%;
+        margin: 32px 0;
+
+        .sign-board-tab-container {
+          display: flex;
+          height: 35px;
+
+          .sign-board-tab {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 186px;
+            height: 100%;
+            background: #fffdfd;
+            cursor: pointer;
+
+            &:first-child {
+              border-radius: 10px 0px 0px 0px;
+            }
+
+            &:last-child {
+              border-radius: 0px 10px 0px 0px;
+            }
+            
+            &.active {
+              color: #fff;
+              font-size: 18px;
+              background: #2a2a2a;
+            }
+          }
+        }
+
+        .sign-board-content {
+          position: relative;
+          width: 100%;
+          height: 455px;
+          border: 32px solid #2a2a2a;
+          border-radius: 0px 15px 15px 15px;
+          background: #fff;
+          box-sizing: border-box;
+
+          canvas.create-sign-canvas {
+            width: 100%;
+            height: 100%;
+          }
+
+          .button-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 24px;
+            right: 24px;
+
+            button {
+              padding: 8px 12px;
+              border: none;
+              border-radius: 10px;
+              color: #fffdfd;
+              background: #6c8268;
+              box-sizing: border-box;
+              cursor: pointer;
+
+              &:not(:last-child) {
+                margin-bottom: 12px;
+              }
+
+              &.disabled {
+                background: #cfcfcf;
+                cursor: not-allowed;
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .btn-close {
+      display: none;
     }
   }
 }
