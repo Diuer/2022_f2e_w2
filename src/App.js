@@ -10,7 +10,7 @@ import PdfPreview from "./sections/PdfPreview";
 
 function App() {
   const [isShowDialog, setIsShowDialog] = useState(false);
-  const [pdf, setPdf] = useState({});
+  const [pdf, setPdf] = useState();
 
   const openDialog = () => {
     setIsShowDialog(true);

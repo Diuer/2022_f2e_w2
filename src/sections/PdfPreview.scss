@@ -106,5 +106,18 @@
       padding: 12px 0;
       box-sizing: border-box;
     }
+
+    .save-sign-document {
+      width: calc(100% - 48px);
+      height: 84px;
+      margin: auto 24px 16px 24px;
+      border: none;
+      border-radius: 20px;
+      font-size: 32px;
+      color: #fffdfd;
+      background: #6c8268;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
   }
 }
